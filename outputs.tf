@@ -17,3 +17,8 @@ output "rg_name" {
   value       = "${var.env}"
   description = "Name of Created Resource Group"
 }
+
+output "location" {
+  value       = "${var.location}"
+  description = "Location of Azure Resources"
+}
