@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "AzureEnv" {
 }
 
 resource "azurerm_network_security_group" "AzureEnv" {
-  name                = "acceptanceTestSecurityGroup1"
+  name                = "${var.env}"
   location            = "${azurerm_resource_group.AzureEnv.location}"
   resource_group_name = "${azurerm_resource_group.AzureEnv.name}"
 }
