@@ -13,10 +13,6 @@ output "security_group" {
   description = "ID of Created Security Group"
 }
 
-output "subnet_name" {
-  value = "${azurerm_subnet.subnet.name}"
-}
-
 output "rg_name" {
   value       = "${var.env}"
   description = "Name of Created Resource Group"
