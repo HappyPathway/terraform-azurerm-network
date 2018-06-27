@@ -10,14 +10,10 @@ variable "location" {
   default     = "West US"
 }
 
-variable "network_cidr" {
+variable "address_space" {
   default     = "10.0.0.0/16"
   type        = "string"
   description = "Azure Network Address Space"
-}
-
-variable "subnet_cidr" {
-  default = "10.0.1.0/24"
 }
 
 variable "dns_server" {
