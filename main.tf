@@ -1,5 +1,3 @@
-provider "azurerm" {}
-
 # Create a resource group
 resource "azurerm_resource_group" "AzureEnv" {
   name     = "${var.service_name}"
