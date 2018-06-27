@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "AzureEnv" {
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = "${var.env}-subnet"
+  name                 = "${var.env}"
   resource_group_name  = "${azurerm_resource_group.AzureEnv.name}"
   virtual_network_name = "${azurerm_virtual_network.AzureEnv.name}"
   address_prefix       = "${var.subnet_cidr}"
