@@ -1,9 +1,3 @@
-variable "env" {
-  type        = "string"
-  description = "Name of Azure Environment"
-  default     = "production"
-}
-
 variable "location" {
   type        = "string"
   description = "Azure Region"
