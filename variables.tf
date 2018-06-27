@@ -27,3 +27,8 @@ variable "resource_tags" {
   description = "Resource Tags"
   default     = {}
 }
+
+variable "service_name" {
+  type        = "string"
+  description = "Name of Deployed Service"
+}
