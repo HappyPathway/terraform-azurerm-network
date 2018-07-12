@@ -22,7 +22,7 @@ variable "resource_tags" {
   default     = {}
 }
 
-variable "service_name" {
+variable "env" {
   type        = "string"
   description = "Name of Deployed Service"
 }

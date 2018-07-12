@@ -19,7 +19,7 @@ output "security_group" {
 }
 
 output "rg_name" {
-  value       = "${var.service_name}"
+  value       = "${var.env}"
   description = "Name of Created Resource Group"
 }
 

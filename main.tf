@@ -1,19 +1,19 @@
 # Create a resource group
 resource "azurerm_resource_group" "AzureEnv" {
-  name     = "${var.service_name}"
+  name     = "${var.env}"
   location = "${var.location}"
   tags     = "${var.resource_tags}"
 }
 
 resource "azurerm_network_security_group" "AzureEnv" {
-  name                = "${var.service_name}"
+  name                = "${var.env}"
   location            = "${azurerm_resource_group.AzureEnv.location}"
   resource_group_name = "${azurerm_resource_group.AzureEnv.name}"
 }
 
 # Create a virtual network within the resource group
 resource "azurerm_virtual_network" "AzureEnv" {
-  name                = "${var.service_name}-network"
+  name                = "${var.env}-network"
   address_space       = ["${var.address_space}"]
   location            = "${azurerm_resource_group.AzureEnv.location}"
   resource_group_name = "${azurerm_resource_group.AzureEnv.name}"
@@ -21,12 +21,12 @@ resource "azurerm_virtual_network" "AzureEnv" {
   tags                = "${var.resource_tags}"
 
   subnet {
-    name           = "${var.service_name}-subnet1"
+    name           = "${var.env}-subnet1"
     address_prefix = "10.0.1.0/24"
   }
 
   subnet {
-    name           = "${var.service_name}-subnet2"
+    name           = "${var.env}-subnet2"
     address_prefix = "10.0.2.0/24"
   }
 
