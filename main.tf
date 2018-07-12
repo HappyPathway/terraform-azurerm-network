@@ -31,7 +31,7 @@ resource "azurerm_virtual_network" "AzureEnv" {
   }
 
   subnet {
-    name           = "${var.service_name}-subnet3"
+    name           = "${var.env}-subnet3"
     address_prefix = "10.0.3.0/24"
   }
 }
