@@ -5,6 +5,7 @@ resource "azurerm_resource_group" "AzureEnv" {
   tags     = "${var.resource_tags}"
 }
 
+# Create a Security Group
 resource "azurerm_network_security_group" "AzureEnv" {
   name                = "${var.env}"
   location            = "${azurerm_resource_group.AzureEnv.location}"
