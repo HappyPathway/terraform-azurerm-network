@@ -36,3 +36,5 @@ resource "azurerm_virtual_network" "AzureEnv" {
     address_prefix = "10.0.3.0/24"
   }
 }
+
+# bam!
