@@ -12,6 +12,12 @@ resource "azurerm_network_security_group" "AzureEnv" {
   resource_group_name = "${azurerm_resource_group.AzureEnv.name}"
 }
 
+resource "azurerm_network_security_group" "AzureEnv2" {
+  name                = "${var.env}-test"
+  location            = "${azurerm_resource_group.AzureEnv.location}"
+  resource_group_name = "${azurerm_resource_group.AzureEnv.name}"
+}
+
 # Create a virtual network within the resource group
 resource "azurerm_virtual_network" "AzureEnv" {
   name                = "${var.env}-network"
